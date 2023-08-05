@@ -1,6 +1,6 @@
 {
   "name": "aws-clean",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Remove all services from your aws account, be careful!",
   "main": "lib/index.js",
   "bin": {
