@@ -1,0 +1,36 @@
+{
+  "name": "aws-clean",
+  "version": "1.0.0",
+  "description": "Remove all services from your aws account, be careful!",
+  "main": "lib/index.js",
+  "bin": {
+    "aws-clean": "lib/index.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdeneklapes/aws-clean.git"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "Zdenek Lapes",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/zdeneklapes/aws-clean/issues"
+  },
+  "homepage": "https://github.com/zdeneklapes/aws-clean#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
