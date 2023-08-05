@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       # Setup .npmrc file to publish to npm
-      - name: Run install
-        uses: borales/actions-yarn@v4
+      - uses: actions/setup-node@v3
+        name: Publish Package to npmjs
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
