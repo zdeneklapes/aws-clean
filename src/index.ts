@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log("hello")
+import aws_main from './aws';
+
+aws_main();
