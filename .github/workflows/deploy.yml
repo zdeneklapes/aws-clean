@@ -1,7 +1,7 @@
 name: Publish Package to npmjs
 on: push
-#  release:
-#    types: [ published ]
+  release:
+    types: [ published ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn
-      - run: yarn publish --preminor --access public
+      - run: yarn publish --new-version ${{ github.event.release.tag_name }} --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
