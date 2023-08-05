@@ -11,8 +11,10 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: |
-            install
-            publish
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
