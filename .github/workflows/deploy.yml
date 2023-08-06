@@ -8,10 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout
-        # Setup git config
-        run: |
-          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+      - uses: fregante/setup-git-user@v1
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         name: Publish Package to npmjs
